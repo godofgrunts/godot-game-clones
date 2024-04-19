@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cymd4ld1g17b"]
+
+[ext_resource type="PackedScene" uid="uid://5yxpboqbkp1y" path="res://scenes/character/bird.tscn" id="1_0f6bi"]
+[ext_resource type="PackedScene" uid="uid://1kto4174evxo" path="res://scenes/pipes/pipes.tscn" id="2_upj2t"]
+
+[node name="World" type="Node2D"]
+
+[node name="Bird" parent="." instance=ExtResource("1_0f6bi")]
+
+[node name="Pipes" parent="." instance=ExtResource("2_upj2t")]

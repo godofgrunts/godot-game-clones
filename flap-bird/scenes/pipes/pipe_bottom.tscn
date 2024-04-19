@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1cxys27heqkm"]
+
+[ext_resource type="Texture2D" uid="uid://dojjccxmua4ub" path="res://assets/pipe/tile_0115.png" id="1_22md5"]
+[ext_resource type="Script" path="res://scenes/pipes/pipe_move.gd" id="1_cid15"]
+[ext_resource type="Texture2D" uid="uid://b733x2wahxw7m" path="res://assets/pipe/tile_0095.png" id="2_na8to"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_da7da"]
+size = Vector2(14, 249)
+
+[node name="PipeTop" type="CharacterBody2D"]
+script = ExtResource("1_cid15")
+
+[node name="Pipe1" type="Sprite2D" parent="."]
+position = Vector2(0, -18)
+texture = ExtResource("1_22md5")
+
+[node name="Pipe2" type="Sprite2D" parent="."]
+position = Vector2(0, -36)
+texture = ExtResource("1_22md5")
+
+[node name="Pipe3" type="Sprite2D" parent="."]
+position = Vector2(0, -54)
+texture = ExtResource("1_22md5")
+
+[node name="Pipe4" type="Sprite2D" parent="."]
+position = Vector2(0, -72)
+texture = ExtResource("1_22md5")
+
+[node name="Pipe5" type="Sprite2D" parent="."]
+position = Vector2(0, -90)
+texture = ExtResource("1_22md5")
+
+[node name="Pipe6" type="Sprite2D" parent="."]
+position = Vector2(0, -108)
+texture = ExtResource("1_22md5")
+
+[node name="Pipe7" type="Sprite2D" parent="."]
+position = Vector2(0, -126)
+texture = ExtResource("1_22md5")
+
+[node name="Pipe8" type="Sprite2D" parent="."]
+position = Vector2(0, -144)
+texture = ExtResource("1_22md5")
+
+[node name="Pipe9" type="Sprite2D" parent="."]
+position = Vector2(0, -162)
+texture = ExtResource("1_22md5")
+
+[node name="Pipe10" type="Sprite2D" parent="."]
+position = Vector2(0, -180)
+texture = ExtResource("1_22md5")
+
+[node name="Pipe11" type="Sprite2D" parent="."]
+position = Vector2(0, -198)
+texture = ExtResource("1_22md5")
+
+[node name="Pipe12" type="Sprite2D" parent="."]
+position = Vector2(0, -216)
+texture = ExtResource("1_22md5")
+
+[node name="Pipe13" type="Sprite2D" parent="."]
+texture = ExtResource("1_22md5")
+
+[node name="PipeTop" type="Sprite2D" parent="."]
+position = Vector2(0, -234)
+texture = ExtResource("2_na8to")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -115.5)
+shape = SubResource("RectangleShape2D_da7da")
+
+[node name="Opening" type="Marker2D" parent="."]
+position = Vector2(0, -241)

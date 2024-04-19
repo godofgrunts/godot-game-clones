@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://1kto4174evxo"]
+
+[ext_resource type="Script" path="res://scenes/pipes/pipes.gd" id="1_lk8wf"]
+
+[node name="Pipes" type="Node"]
+script = ExtResource("1_lk8wf")
