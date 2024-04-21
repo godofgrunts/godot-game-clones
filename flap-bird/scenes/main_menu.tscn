@@ -1,0 +1,93 @@
+[gd_scene load_steps=4 format=3 uid="uid://56k6fvll4nss"]
+
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_jwdfe"]
+[ext_resource type="Texture2D" uid="uid://ctsbmw2l4pwly" path="res://assets/background/1.png" id="1_tpqjt"]
+[ext_resource type="Theme" uid="uid://bo52gg8kb7xro" path="res://assets/new_theme.tres" id="2_yl5xo"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jwdfe")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Sprite2D" parent="MarginContainer"]
+position = Vector2(0, 16.5)
+texture = ExtResource("1_tpqjt")
+centered = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(171.5, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(169, 0)
+layout_mode = 2
+
+[node name="Control3" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 85)
+layout_mode = 2
+
+[node name="Menu" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_yl5xo")
+text = "FLAP BIRD"
+horizontal_alignment = 1
+
+[node name="Win" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme = ExtResource("2_yl5xo")
+text = "YOU WIN"
+horizontal_alignment = 1
+
+[node name="Lose" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme = ExtResource("2_yl5xo")
+text = "YOU LOSE"
+horizontal_alignment = 1
+
+[node name="Control4" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 85)
+layout_mode = 2
+
+[node name="Play" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_yl5xo")
+text = "Play"
+
+[node name="Credits" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_yl5xo")
+text = "Credits"
+
+[node name="Quit" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_yl5xo")
+text = "QUIT"
+
+[node name="Control5" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 65)
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(171.5, 0)
+layout_mode = 2
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

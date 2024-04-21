@@ -1,6 +1,5 @@
-[gd_scene load_steps=5 format=3 uid="uid://ci46qu38pwe3h"]
+[gd_scene load_steps=4 format=3 uid="uid://ci46qu38pwe3h"]
 
-[ext_resource type="Script" path="res://scenes/pipes/pipe_move.gd" id="1_cdjub"]
 [ext_resource type="Texture2D" uid="uid://dojjccxmua4ub" path="res://assets/pipe/tile_0115.png" id="1_wo2hw"]
 [ext_resource type="Texture2D" uid="uid://cb0ut0owmag63" path="res://assets/pipe/tile_0135.png" id="2_kh35c"]
 
@@ -8,7 +7,6 @@
 size = Vector2(14, 249)
 
 [node name="PipeTop" type="CharacterBody2D"]
-script = ExtResource("1_cdjub")
 
 [node name="Pipe1" type="Sprite2D" parent="."]
 position = Vector2(0, -18)

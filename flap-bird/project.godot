@@ -13,7 +13,11 @@ config_version=5
 config/name="flap-bird"
 run/main_scene="res://scenes/world.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://icon.png"
+
+[autoload]
+
+SignalManager="*res://singletons/SignalManager.gd"
 
 [display]
 

@@ -1,10 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://cymd4ld1g17b"]
+[gd_scene load_steps=4 format=3 uid="uid://cymd4ld1g17b"]
 
-[ext_resource type="PackedScene" uid="uid://5yxpboqbkp1y" path="res://scenes/character/bird.tscn" id="1_0f6bi"]
-[ext_resource type="PackedScene" uid="uid://1kto4174evxo" path="res://scenes/pipes/pipes.tscn" id="2_upj2t"]
+[ext_resource type="Script" path="res://scenes/world.gd" id="1_svvcd"]
+[ext_resource type="PackedScene" uid="uid://56k6fvll4nss" path="res://scenes/main_menu.tscn" id="2_i2maj"]
+[ext_resource type="PackedScene" uid="uid://dntcvjtbuglem" path="res://scenes/credits.tscn" id="3_fcxep"]
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_svvcd")
 
-[node name="Bird" parent="." instance=ExtResource("1_0f6bi")]
+[node name="MainMenu" parent="." instance=ExtResource("2_i2maj")]
+unique_name_in_owner = true
+offset_left = 260.0
+offset_top = 142.0
+offset_right = 260.0
+offset_bottom = 142.0
 
-[node name="Pipes" parent="." instance=ExtResource("2_upj2t")]
+[node name="Music" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+
+[node name="Credits" parent="." instance=ExtResource("3_fcxep")]
+visible = false

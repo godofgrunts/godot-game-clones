@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://dntcvjtbuglem"]
+
+[ext_resource type="Texture2D" uid="uid://ctsbmw2l4pwly" path="res://assets/background/1.png" id="1_4luyk"]
+[ext_resource type="Theme" uid="uid://bo52gg8kb7xro" path="res://assets/new_theme.tres" id="2_0ueib"]
+[ext_resource type="Texture2D" uid="uid://crjac06wm1mmm" path="res://assets/background/2.png" id="2_vrwqd"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("1_4luyk")
+centered = false
+
+[node name="2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(288, 160)
+texture = ExtResource("2_vrwqd")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_0ueib")
+text = "Bird and Pipes: Kenney - https://kenney.nl/assets/pixel-platformer
+
+Font: Kenny Future - https://kenney.nl/assets/kenney-fonts
+
+Background: CraftPix.net 2D Game Assets - https://opengameart.org/content/simple-natural-landscape-pixel-art-background - OGA-BY 3.0
+
+Music:
+	springtime-flight - GodofGrunts created in BeepBox
+
+	winner - GodofGrunts created in BeepBox
+
+	loser - GodofGrunts created in BeepBox 
+
+	\"Cloud Dancer \" Kevin MacLeod (incompetech.com) - Licensed under Creative Commons: By Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0/
+"
