@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1ydc8o025dcx"]
+
+[ext_resource type="Texture2D" uid="uid://bj6l7fsl6fwiq" path="res://assets/paddle/paddle.png" id="1_bcusd"]
+[ext_resource type="Script" path="res://scenes/paddle.gd" id="1_wj3xq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ifumv"]
+size = Vector2(6, 36)
+
+[node name="Paddle" type="CharacterBody2D"]
+script = ExtResource("1_wj3xq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bcusd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ifumv")

@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=3 uid="uid://cid7rfw46no7g"]
+
+[ext_resource type="PackedScene" uid="uid://ccl32wwtdalb2" path="res://scenes/hud.tscn" id="1_y3fhj"]
+[ext_resource type="Script" path="res://scenes/wall.gd" id="2_4f542"]
+[ext_resource type="PackedScene" uid="uid://d1ydc8o025dcx" path="res://scenes/paddle.tscn" id="2_hb2sk"]
+[ext_resource type="PackedScene" uid="uid://d35dd67wyi8va" path="res://scenes/ball.tscn" id="3_h7ybp"]
+[ext_resource type="Script" path="res://scenes/goal.gd" id="3_uhy6q"]
+[ext_resource type="AudioStream" uid="uid://barv3klqkd0wv" path="res://assets/sounds/music.mp3" id="6_m0umr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nok3s"]
+size = Vector2(512, 6.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6c51f"]
+size = Vector2(10, 288)
+
+[node name="World" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 512.0
+offset_bottom = 288.0
+mouse_filter = 2
+
+[node name="HUD" parent="Control" instance=ExtResource("1_y3fhj")]
+layout_mode = 1
+
+[node name="Top" type="StaticBody2D" parent="."]
+script = ExtResource("2_4f542")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Top"]
+position = Vector2(256, -3.75)
+shape = SubResource("RectangleShape2D_nok3s")
+
+[node name="Bottom" type="StaticBody2D" parent="."]
+position = Vector2(0, 288)
+script = ExtResource("2_4f542")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom"]
+position = Vector2(256, 3.125)
+shape = SubResource("RectangleShape2D_nok3s")
+
+[node name="P1Goal" type="StaticBody2D" parent="."]
+script = ExtResource("3_uhy6q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="P1Goal"]
+position = Vector2(-5, 144)
+shape = SubResource("RectangleShape2D_6c51f")
+
+[node name="P2Goal" type="StaticBody2D" parent="."]
+position = Vector2(522, 0)
+script = ExtResource("3_uhy6q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="P2Goal"]
+position = Vector2(-5, 144)
+shape = SubResource("RectangleShape2D_6c51f")
+
+[node name="Player" parent="." instance=ExtResource("2_hb2sk")]
+position = Vector2(25, 144)
+
+[node name="CPU" parent="." instance=ExtResource("2_hb2sk")]
+position = Vector2(487, 144)
+
+[node name="Ball" parent="." instance=ExtResource("3_h7ybp")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_m0umr")
+volume_db = -15.0
+autoplay = true
